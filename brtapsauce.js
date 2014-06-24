@@ -11,7 +11,7 @@ function brtapsauce (options, callback) {
     throw new Error('must supply a saucelabs `user` option')
   if (typeof options.key != 'string')
     throw new Error('must supply a saucelabs `key` option')
-  if (typeof options.brsrc != 'string' || typeof options.srcFn != 'function')
+  if (typeof options.brsrc != 'string' && typeof options.srcFn != 'function')
     throw new Error('must supply a browserify `brsrc` file option or `srcFn` option')
   if (!Array.isArray(options.capabilities))
     throw new Error('must supply a `capabilities` array option')
